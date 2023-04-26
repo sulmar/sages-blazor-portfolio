@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Tworzenie aplikacji w Blazor 7.0",
+    "description": "Poznaj Blazor, framework open-source oparty o platformę .NET Core i język C# do tworzenia aplikacji webowych po stronie klienta lub serwera.",
+    "url": "https://www.sages.pl/szkolenia/blazor-7.0"
+  },
+  {
+    "title": "Tworzenie usług sieciowych REST API w ASP.NET Core 7.0",
+    "description": "W .NET 7 wprowadzono nowy model programowania Minimal API, który ułatwia budowanie usług i przyspiesza ich działanie.",
+    "url": "https://www.sages.pl/szkolenia/asp.net-core-7"
+  },
+  {
+    "title": "Mikro-usługi w ASP.NET Core 7.0",
+    "description": "W .NET 7 wprowadzono nowy model programowania Minimal API, który ułatwia budowanie usług i przyspiesza ich działanie.",
+    "url": ""
+  },
+  {
+    "title": "Testowanie aplikacji webowych w Playwright",
+    "description": "Poznaj nowoczesne środowisko do testowania.",
+    "url": ""
+  },
+  {
+    "title": "Redis 7.0",
+    "description": "Przyspiesz działanie swoich aplikacji.",
+    "url": ""
+  },
+  {
+    "title": "Wzorce Projektowe w C#",
+    "description": "Zastosuj wzorce projektowe.",
+    "url": "https://www.sages.pl/szkolenia/wzorce-projektowe-w-c-sharp"
+  }
+]
