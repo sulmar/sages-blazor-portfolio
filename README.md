@@ -21,3 +21,7 @@ git clone https://github.com/sages-blazor-portfolio
 cd src
 dotnet run
 ```
+
+## Mockup
+
+![Mockup](/ui-mockup.png)
