@@ -84,9 +84,13 @@ dotnet run
 <Contact />
 ```
 
-10. W wwwroot/index.html odkomentuj linię aby włączyć mechanizm **CSS isolation**
+11. W _wwwroot/index.html_ odkomentuj linię:
+``` html 
+<link href="MyPortfolio.styles.css" rel="stylesheet" />
+```
+aby włączyć mechanizm **CSS isolation**
 
-11. Dodaj style
+12. Dodaj style
 - Home.razor.css
 - About.razor.css
 - Contact.razor.css
