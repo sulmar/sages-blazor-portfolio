@@ -1,0 +1,12 @@
+﻿
+img.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0 3rem;
+    gap: 2.5rem;
+}

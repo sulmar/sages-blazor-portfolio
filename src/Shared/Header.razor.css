@@ -1,0 +1,21 @@
+﻿.top-row {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+    background: rgba(255,255,255,0.75);
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+    a:hover {
+        color: #4e567e;
+    }

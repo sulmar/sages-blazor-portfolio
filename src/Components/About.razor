@@ -1,0 +1,35 @@
+﻿@inject HttpClient Http
+
+<section id="about" class="dark">
+
+    @if (aboutMe is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="container">
+
+            <div class="information-text">
+                <h2>About me</h2>
+                <p class="description">@aboutMe.Description</p>
+            </div>
+
+            <img class="headshot" src="images/headshot.jpg" />
+
+        </div>
+    }
+
+
+</section>
+
+@code {
+    private AboutMe? aboutMe;
+
+    protected override async Task OnInitializedAsync()
+    {
+        aboutMe = await Http.GetFromJsonAsync<AboutMe>("sample-data/aboutme.json");
+    }
+
+
+}

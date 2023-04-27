@@ -1,0 +1,21 @@
+﻿
+.container
+{
+    display: flex;
+    padding: 2rem;    
+}
+
+.headshot {
+    width: 300px;
+    border-radius: 150px;
+    margin-left: 80px;
+}
+
+.information-text {
+    color: white;
+}
+
+.description {
+    font-size: 24px;
+  
+}

@@ -1,0 +1,66 @@
+﻿@inject HttpClient Http
+
+<footer>
+    <section class="dark">
+
+        @if (property is null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else if (icons is not null)
+        {
+            <div id="contact">
+
+                @if (string.IsNullOrWhiteSpace(property.Email) is false)
+                {
+                    <a href="mailto:@(property.Email)">
+                        <img src="@icons.Email" alt="email" class="social-icon" />
+                    </a>
+                }
+                @if (string.IsNullOrWhiteSpace(property.GitHub) is false)
+                {
+                    <a href="https://github.com/@(property.GitHub)" target="_blank" rel="noopener noreferrer">
+                        <img src="@icons.GitHub" alt="GitHub" class="social-icon" />
+                    </a>
+                }
+                @if (string.IsNullOrWhiteSpace(property.Instagram) is false)
+                {
+                    <a href="https://instagram.com/@(property.Instagram)" target="_blank" rel="noopener noreferrer">
+                        <img src="@icons.Instagram" alt="Instagram" class="social-icon" />
+                    </a>
+                }
+                @if (string.IsNullOrWhiteSpace(property.LinkedIn) is false)
+                {
+                    <a href="https://linkedin.com/in/@(property.LinkedIn)" target="_blank" rel="noopener noreferrer">
+                        <img src="@icons.LinkedIn" alt="LinkedIn" class="social-icon" />
+                    </a>
+                }
+                @if (string.IsNullOrWhiteSpace(property.Twitter) is false)
+                {
+                    <a href="https://twitter.com/@(property.Twitter)" target="_blank" rel="noopener noreferrer">
+                        <img src="@icons.Twitter" alt="Twitter" class="social-icon" />
+                    </a>
+                }
+                @if (string.IsNullOrWhiteSpace(property.YouTube) is false)
+                {
+                    <a href="https://youtube.com/@(property.YouTube)" target="_blank" rel="noopener noreferrer">
+                        <img src="@icons.YouTube" alt="YouTube" class="social-icon" />
+                    </a>
+                }
+            </div>
+        }
+
+    </section>
+</footer>
+
+
+@code {
+    private SiteProperties? property;
+    private SocialIcons? icons;
+
+    protected override async Task OnInitializedAsync()
+    {
+        property = await Http.GetFromJsonAsync<SiteProperties>("sample-data/siteproperties.json");
+        icons = await Http.GetFromJsonAsync<SocialIcons>("sample-data/socialicons.json");
+    }
+}

@@ -1,0 +1,30 @@
+﻿
+.hero-image {
+    height: 100%;
+    position: relative;
+}
+
+
+    .hero-image img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+.hero-text {
+    position: absolute;
+    top: 30%;
+    left: 3rem;
+    font-family: "Courier New";    
+}
+
+    .hero-text h1 {
+        font-size: 5rem;
+        font-weight: 300;        
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+        font-weight: normal;
+    }
+
+    

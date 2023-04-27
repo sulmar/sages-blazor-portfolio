@@ -1,0 +1,9 @@
+﻿<article class="box">
+    <h3 class="headline">@Project.Title</h3>
+    <p class="subhead">@Project.Description</p>
+</article>   
+
+@code {
+    [Parameter, EditorRequired]
+    public required Project Project { get; set; }
+}

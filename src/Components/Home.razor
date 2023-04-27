@@ -1,0 +1,36 @@
+﻿@inject HttpClient Http
+
+<section id="home">
+
+    @if (property is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="container">
+
+            <div class="hero-image">
+                <img src="images/@property.Hero" />
+            </div>
+
+            <div class="hero-text">
+                <h1>@property.Name</h1>
+                <h2>@property.Title</h2>
+            </div>
+
+        </div>
+
+    }
+
+</section>
+
+@code {
+    private SiteProperties? property;
+
+    protected override async Task OnInitializedAsync()
+    {
+        property = await Http.GetFromJsonAsync<SiteProperties>("sample-data/siteproperties.json");
+    }
+
+}

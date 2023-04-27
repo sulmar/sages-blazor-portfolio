@@ -1,0 +1,20 @@
+﻿.box {
+    box-shadow: 5px 5px 20px rgb(197, 195, 195);
+    padding: 24px 16px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+.headline {
+    font-size: 30px;
+    font-weight: normal;
+    color: black;
+}
+
+.subhead {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #3d3d3d;
+}

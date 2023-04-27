@@ -1,0 +1,33 @@
+﻿@inject HttpClient Http
+
+<section id="portfolio">
+
+    <h2>Portfolio</h2>
+
+    @if (projects is null)
+    {
+
+    }
+    else
+    {
+        <div class="container">
+            @foreach (var project in projects)
+            {
+                <ProjectComponent Project="@project" />
+            }
+        </div>
+    }
+
+</section>
+
+
+
+@code {
+    private List<Project>? projects;
+
+    protected override async Task OnInitializedAsync()
+    {
+        projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
+    }
+
+}
