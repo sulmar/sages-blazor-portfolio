@@ -1,0 +1,47 @@
+﻿@page "/posts/{slug}"
+
+@if (@frontMatter is not null)
+{
+    <h2>@frontMatter.Title</h2>
+
+    <h3>@frontMatter.Category</h3>
+
+    @if (@frontMatter?.GetTags is not null)
+    {
+        <ul>
+            @foreach (var tag in @frontMatter.GetTags)
+            {
+                <li>@tag</li>
+            }
+        </ul>
+    }
+
+
+    <h3>Agenda</h3>
+
+    <div id="content">
+        @content
+    </div>
+}
+
+@code {
+
+    private BlogFrontMatter frontMatter;
+
+    [Parameter]
+    public string Slug { get; set; }
+
+    private MarkupString content;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var post = await Http.GetStringAsync("sample-data/redis-for-developers.md");
+
+        frontMatter = post.GetFrontMatter<BlogFrontMatter>();
+
+        content = new MarkupString(post.Render());
+
+    }
+
+
+}
