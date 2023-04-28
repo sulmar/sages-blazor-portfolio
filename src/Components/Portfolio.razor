@@ -1,12 +1,11 @@
-﻿@inject HttpClient Http
-
+﻿
 <section id="portfolio">
 
     <h2>Portfolio</h2>
 
     @if (projects is null)
     {
-
+        <p><em>Loading...</em></p>
     }
     else
     {
@@ -21,13 +20,3 @@
 </section>
 
 
-
-@code {
-    private List<Project>? projects;
-
-    protected override async Task OnInitializedAsync()
-    {
-        projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
-    }
-
-}
