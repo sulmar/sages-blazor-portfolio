@@ -1,0 +1,15 @@
+﻿@using Markdig;
+
+<div id="headline">
+    @html
+</div>
+
+@code {
+
+    private MarkupString html;
+
+    protected override async Task OnInitializedAsync()
+    {
+        html = new MarkupString(Markdown.ToHtml("This is a text with some *emphasis*"));
+    }
+}
